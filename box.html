@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four Dots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .game-container {
+            width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .turn-message {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #444;
+            padding: 10px;
+            background-color: #e7e7e7;
+            border-radius: 5px;
+        }
+        
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            margin: 20px auto;
+            width: fit-content;
+            background-color: #1a73e8;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        .column {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        
+        .cell {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 5px;
+            border: 2px solid #08090a;
+        }
+        .cell:hover{
+            background-color: #444;}
+
+        .column:nth-child(1) .cell:nth-child(1) { background-color: #ff5252; } /* Player 1 */
+        .column:nth-child(2) .cell:nth-child(1) { background-color: #ffeb3b; } /* Player 2 */
+        .column:nth-child(2) .cell:nth-child(2) { background-color: #ff5252; } /* Player 3 */
+        
+        .controls {
+            margin: 20px 0;
+        }
+       .reload-btn:hover{
+        background-color: pink;
+       }
+        .reload-btn {
+            width: 100px;
+            align-items: center;
+            margin: auto;
+            background-color: #247821;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px; 
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Connect Four Dots</h1>
+        <p class="turn-message">p1y1: It's your turn, click a column to add your chip</p>
+        
+        <div class="game-board">
+            <!-- Column 1 -->
+            <div class="column">
+                <div class="cell player1"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="column">
+                <div class="cell player2"></div>
+                <div class="cell player1"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            
+            <!-- Columns 3-7 -->
+            <div class="column"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+
+            <div class="column"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+
+            <div class="column"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+
+            <div class="column"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+
+            <div class="column"><div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
+        </div>
+        
+        <div class="controls">
+            <div class="reload-btn">Reload Game</div>
+        </div>
+    </div>
+</body>
+</html>
